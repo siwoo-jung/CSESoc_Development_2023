@@ -1,0 +1,39 @@
+#research-img {
+    width: 70%;
+}
+
+#research__detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+ 
+    border: solid 0.1em rgb(191, 189, 233);
+    border-radius: 2rem;
+    padding: 20px;
+    justify-content: start;
+    background-color: rgb(241, 241, 251);
+}
+
+#work__detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    justify-content: start;
+    max-width: 30%;
+    gap: 1em;
+}
+
+#nonnested {
+    list-style:square
+}
+
+#nested {
+    margin-left: 20px;
+    text-justify: justify;
+}
+
+#topic {
+    font-weight: bold;
+}

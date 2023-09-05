@@ -1,0 +1,21 @@
+.contact__icon-container {
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 1em;
+    flex-wrap: wrap;
+    width: 50%;
+    align-items: center;
+    position: relative;
+}
+
+.contact__icon {
+    width: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+#contact {
+    background-color:rgb(242, 245, 230);
+    height: 10vh;
+    padding: 0;
+}

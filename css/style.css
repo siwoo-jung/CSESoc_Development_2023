@@ -1,0 +1,513 @@
+/* IMPORT FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+/* IMPORT LOCAL CSS FILES */
+@import url("sections/header.css");
+@import url("sections/intro.css");
+@import url("sections/life.css");
+@import url("sections/experience.css");
+@import url("sections/hobbies.css");
+@import url("sections/contact.css");
+
+/* VARIABLES */
+:root {
+  --roboto-slab: "Roboto Slab", sans-serif;
+  --montserat-font: "Playfair Display", sans-serif;
+  --basic-font: 'Courier New', Courier, monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  font-family: var(--roboto-slab);
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.title {
+  margin-top: 100px;
+  font-family: var(--montserat-font);
+  text-align: center;
+}
+
+.default-title-span {
+  color:rgb(61, 159, 208);
+  font-size: 2em;
+}
+
+.main-container {
+  display: flex;
+  padding: 0 100px 100px 100px;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5em;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex: 1;
+}
+
+.main__detail-container {
+  display: flex;
+  gap: 3em;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-family: var(--roboto-slab);
+  flex-direction: row;
+  flex: 1;
+}
+
+.button {
+  height: 7%;
+  padding: 1%;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: white;
+  border: solid 2px black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: black;
+  color: white;
+}
+
+/* MINI MENU */
+
+#mini-nav {
+  display: none;
+}
+
+.mini-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.mini-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.mini-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+/* MINI ICON */
+
+.mini-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px)
+}
+.mini-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.mini-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px)
+}
+
+.mini-icon span:first-child {
+  transform: none;
+}
+.mini-icon span:nth-child(2) {
+  opacity: 1; 
+}
+.mini-icon span:last-child {
+  transform: none;
+}
+
+.mini-menu {
+  display: none;
+}
+
+.menu-links li a {
+  font-size: 10px;
+}
+
+.menu-links li:hover {
+  background-color: grey;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1300px) {
+  #main-unilife {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .unilife__detail-ec {
+    justify-content: center;
+  }
+
+  #main-hobbies {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #coding {
+    width: 30%;
+  }
+
+  #violin {
+    width: 20%;
+  }
+
+  #music {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .main__detail-container {
+    flex-direction: row;
+  }
+
+  #main-about {
+    gap: 0.7em;
+    justify-content: space-between;
+  }
+
+  .intro__pic img {
+    width: 230px;
+    height: auto;
+  }
+
+  .intro__education-container {
+    width: 70%;
+  }
+
+  .intro__description-details p {
+    font-size: 15px;
+  }
+
+  .intro__education-degree p {
+    font-size: 14px;
+  }
+
+  #uni_logo {
+    width: 150px;
+  }
+
+  #main-unilife {
+    gap: 2em;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 1060px) {
+  #about {
+    gap: 1em;
+  }
+
+  .intro__pic img {
+    width: 200px;
+    height: auto;
+  }
+
+  .intro__description-name {
+    font-size: 25px;
+  }
+
+  .intro__description-details p {
+    font-size: 10px;
+  }
+
+  .intro__description {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    width: 80%;
+    gap: 1em;
+  }
+
+  .intro__education-container {
+    gap: 0.5em;
+    border-radius: 10px;
+  }
+
+  #btn-cv {
+    height: 20px;
+    font-size: 10px;
+  }
+
+  #grad {
+    width: 30px;
+    height: auto;
+  }
+
+  #uni_logo {
+    width: 100px;
+    height: auto;
+  }
+
+  .intro__education-degree p {
+    font-size: 8px;
+  }
+
+  .unilife__detail-ec {
+    justify-content: center;
+  }
+
+  #check {
+    width: 20px;
+    height: auto;
+  }
+
+  .unilife__detail-courses {
+    padding: 20px;
+  }
+
+  #ec {
+    font-size: 13px;
+  }
+
+  #nonnested li {
+    font-size: 13px;
+  }
+
+  #work__detail li {
+    font-size: 13px;
+  }
+
+  .hobbies__container h1 {
+    font-size: 17px;
+  }
+
+  #list-color li {
+    font-size: 10px;
+  }
+
+  #main-hobbies {
+    padding-right: 10px;
+  }
+
+  #main-about {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main__detail-container {
+    justify-content: space-between;
+  }
+
+  .experience__detail {
+    width: 50%;
+  }
+
+  #main-experience {
+    gap: 1em;
+  }
+
+  #main-hobbies {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .header__nav-name h4 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header__nav-name h4 {
+    font-size: 20px;
+  }
+
+  .main-container {
+    padding: 0 30px 30px 30px;
+  }
+  .main__detail-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .intro__description {
+    width: 80%;
+    gap: 1em;
+  }
+
+  .unilife__detail-ec {
+    width: 80%;
+  }
+
+  #work__detail {
+    max-width: 80%;
+  }
+
+  .hobbies__container {
+    max-width: 80%;
+  }
+
+  #research__detail {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title h1{
+    font-size: 20px;
+  }
+
+  .main-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 30px 30px 30px;
+  }
+
+  .header__nav-list {
+    display: none;
+  }
+
+  .header__nav-name h4 {
+    font-size: 20px;
+  }
+
+  .mini-menu {
+    display: block;
+  }
+
+  .header__nav {
+    justify-content: space-between;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  #main-about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  #main-experience {
+    flex-direction: column;
+  }
+
+  .intro__description {
+    width: 70%;
+    gap: 1em;
+  }
+
+  .intro__description-name {
+    font-size: 20px;
+  }
+
+  .intro__description-details {
+    width: 100%;
+  }
+
+  #main-unilife {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .unilife__detail-biography-table dt, dd {
+    font-size: 13px;
+  }
+
+  .unilife__detail-courses {
+    min-width: 60%;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .comp {
+    width: 40%;
+  }
+
+  .unilife__detail-ec {
+    width: 80%;
+  }
+
+  #work__detail {
+    max-width: 80%;
+  }
+
+  #hobbies {
+    flex-direction: column;
+  }
+
+  #main-hobbies {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hobbies__container {
+    min-width: 80%;
+  }
+
+  #research__detail {
+    width: 80%;
+  }
+
+  #main-experience {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contact__icon {
+    width: 30px;
+    height: auto;
+  }
+}

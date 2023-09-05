@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type=image/jpeg href="./assets/unsw-logo-small.jpeg">
+    <title>Siwoo JUNG</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="header__nav">
+        <div class="header__nav-name">
+          <h4>Siwoo JUNG</h4>
+        </div>
+        <div class="header__nav-list">
+          <ul class="header__nav-link">
+            <li><a href="#about">About</a></li>
+            <li><a href="#unilife">UNSW_Life</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="mini-menu">
+          <div class="mini-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#unilife" onclick="toggleMenu()">UNSW_Life</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#hobbies" onclick="toggleMenu()">Hobbies</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="main-container" id="about">
+      <div class="title" id="about-title">
+        <h1><span class="default-title-span">A</span>BOUT</h1>
+      </div>
+      <div class="main__detail-container" id="main-about">
+        <div class="intro__pic-container">
+          <div class="intro__pic">
+            <img
+              class="intro__pic-self"
+              src="./assets/siwoo.jpeg"
+              alt="siwoo pic"
+            />
+          </div>
+        </div>
+        <div class="intro__description">
+          <div class="intro__description-name">Siwoo <span>JUNG</span></div>
+          <div class="intro__description-details">
+            <p>
+              Originally from chemical engineering but trying to break into tech
+              to pursue what I really am passionate about
+            </p>
+          </div>
+          <button
+            id="btn-cv"
+            class="button"
+            onclick="location.href='./assets/CV.pdf'"
+          >
+            Download CV
+          </button>
+        </div>
+        <div class="education__logo__degree-container">
+          <div class="intro__education-container">
+            <div class="intro__education-logo">
+              <img id="grad" src="./assets/grad.png" alt="UNSW Logo" />
+            </div>
+            <div class="intro__education-logo">
+              <img id="uni_logo" src="./assets/unsw2.png" alt="UNSW Logo" />
+            </div>
+            <div class="intro__education-degree">
+              <p>(Current) M.Phil. - Chemical Engineering</p>
+              <br />
+              <p>B.E. (Hons) - Chemical Engineering</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNSW LIFE -->
+    <section class="main-container" id="unilife">
+      <div class="title">
+        <h1><span class="default-title-span">L</span>IFE IN UNSW</h1>
+      </div>
+      <div class="main__detail-container" id="main-unilife">
+        <div class="unilife__detail-biography">
+          <dl class="unilife__detail-biography-table">
+            <dt>2013</dt>
+            <dd>Started B.E.</dd>
+            <br />
+            <dt>2019</dt>
+            <dd>Graduated B.E.</dd>
+            <br />
+            <dt>2022</dt>
+            <dd>Started M.Phil.</dd>
+          </dl>
+        </div>
+        <div class="unilife__detail-courses">
+          <p id="sub-title">Courses</p>
+          <div class="unilife__detail-courses-detail">
+            <div class="unilife__detail-compcourse">
+              <div class="comp">
+                <img src="./assets/check.png" id="check" alt="check" />
+                <p>COMP1911</p>
+              </div>
+              <div class="comp">
+                <img src="./assets/check.png" id="check" alt="check" />
+                <p>COMP9021</p>
+              </div>
+              <div class="comp" id="comp9024">
+                <img src="./assets/unchecked.jpg" id="check" alt="check" />
+                <p>COMP9024<span> (T3 23')</span></p>
+              </div>
+              <div class="comp">
+                <img src="./assets/check.png" id="check" alt="check" />
+                <p>MATH1131</p>
+              </div>
+              <div class="comp">
+                <img src="./assets/check.png" id="check" alt="check" />
+                <p>MATH1231</p>
+              </div>
+              <div class="comp">
+                <img src="./assets/check.png" id="check" alt="check" />
+                <p>MATH2089</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="unilife__detail-ec">
+          <p id="sub-title">Clubs</p>
+          <div id="ec">UNSW Orchestra<br />(Violinist)</div>
+          <div id="ec">Korean Students Association (KSA)</div>
+          <div id="ec">Korean Postgraduate Students Association (KPSA)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="main-container" id="experience">
+      <div class="title">
+        <h1><span class="default-title-span">E</span>XPERIENCE</h1>
+      </div>
+      <div class="main__detail-container" id="main-experience">
+        <div class="experience__detail" id="research__detail">
+          <p id="sub-title">Research</p>
+          <img id="research-img" src="./assets/research.gif" alt="research" />
+          <ul id="nonnested">
+            <li id="topic">Numerical modelling of hydrogen storage tanks</li>
+            <br />
+            <li>Area:</li>
+            <ul id="nested">
+              <li>Computational Fluid Dynamics (CFD)</li>
+              <li>Fluid Dynamics</li>
+              <li>Thermodynamics</li>
+            </ul>
+            <br />
+            <li>Required skills & software:</li>
+            <ul id="nested">
+              <li>High-Performance-Computing (HPC)</li>
+              <li>Ansys Fluent</li>
+              <li>COMSOL Multiphysics</li>
+            </ul>
+          </ul>
+          <button
+            class="button"
+            onclick="location.href='https://pubs.acs.org/doi/full/10.1021/acs.energyfuels.1c00666'"
+          >
+            View Publication
+          </button>
+        </div>
+
+        <div class="experience__detail" id="work__detail">
+          <p id="sub-title">Work</p>
+          <ul>
+            <li>Process Engineer (1.5 YOE):</li>
+            <ul id="nested">
+              <li>
+                Issued and updated technical documents, such as SOP and P&ID, of
+                existing and the commissioning plant
+              </li>
+              <li>Managed safety and efficiency of plants</li>
+            </ul>
+            <br />
+            <li>Project Engineer (1.5 YOE)</li>
+            <ul id="nested">
+              <li>Project schedule control</li>
+              <li>Engineering document control</li>
+              <li>Commissioning and start-up of the plant</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section class="main-container" id="hobbies">
+      <div class="title">
+        <h1><span class="default-title-span">H</span>OBBIES</h1>
+      </div>
+      <div class="main__detail-container" id="main-hobbies">
+        <div class="hobbies__container" id="violin">
+          <h1>Violin</h1>
+          <img id="orchestra" src="./assets/orchestra.jpeg" alt="orchestra" />
+          <ul id="list-color">
+            <li>
+              Had participated in various orchestra until 19 years old
+              (including UNSW Orchestra !)
+            </li>
+            <li>
+              Not sure if is still a hobby, as I have not really played for
+              almost ten years
+            </li>
+          </ul>
+        </div>
+
+        <div class="hobbies__container" id="coding">
+          <h1>Coding</h1>
+          <div class="hobbies__coding-know" id="coding-main">
+            <p>Languages (I believe) I know</p>
+            <div class="coding-container">
+              <div class="languages">
+                <img id="python" src="./assets/python.png" alt="python" />
+                <p>Python</p>
+              </div>
+              <div class="languages">
+                <img id="c" src="./assets/c.png" alt="C" />
+                <p>C</p>
+              </div>
+              <div class="languages">
+                <img id="java" src="./assets/java.png" alt="C" />
+                <p>Java</p>
+              </div>
+              <div class="languages">
+                <img id="HTML" src="./assets/html.png" alt="HTML" />
+                <p>HTML</p>
+              </div>
+              <div class="languages">
+                <img id="CSS" src="./assets/CSS.png" alt="CSS" />
+                <p>CSS</p>
+              </div>
+            </div>
+          </div>
+          <div class="hobbies__coding-unknown" id="coding-main">
+            <p>
+              Others (languages, libraries, tools, etc.) I want to dive into
+            </p>
+            <div class="coding-container">
+              <div class="languages">
+                <img id="javascript" src="./assets/js.png" alt="Javascript" />
+                <p>Javascript</p>
+              </div>
+              <div class="languages">
+                <img id="react" src="./assets/react.png" alt="react" />
+                <p>React</p>
+              </div>
+              <div class="languages">
+                <img id="nodejs" src="./assets/nodejs.svg" alt="nodejs" />
+                <p>Node.js</p>
+              </div>
+              <div class="languages">
+                <img id="sql" src="./assets/sql.png" alt="sql" />
+                <p>SQL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hobbies__container" id="music">
+          <h1>Musics</h1>
+          <ul id="list-color">
+            <li>Love listening and singing</li>
+            <li>Like most genre, including pops, kpops, Hip-hop, classics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <footer class="main-container" id="contact">
+      <div class="contact__icon-container">
+        <div>
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn"
+            class="contact__icon"
+            onclick="location.href='https://www.linkedin.com/in/siwoojung'"
+          />
+        </div>
+        <div>
+          <img
+            src="./assets/github.png"
+            alt="Github"
+            class="contact__icon"
+            onclick="location.href='https://www.github.com/siwoo-jung'"
+          />
+        </div>
+        <div>
+          <img
+            src="./assets/instagram.png"
+            alt="LinkedIn"
+            class="contact__icon"
+            onclick="location.href='https://www.instagram.com/itsiwoo'"
+          />
+        </div>
+        <div>
+          <img
+            src="./assets/email.png"
+            alt="Email"
+            class="contact__icon"
+            onclick="location.href='mailto:siwoo.jg@gmail.com'"
+          />
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
