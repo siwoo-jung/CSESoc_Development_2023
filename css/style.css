@@ -342,6 +342,7 @@ ul {
 
   .main__detail-container {
     justify-content: space-between;
+    align-items: center;
   }
 
   .experience__detail {
@@ -355,6 +356,18 @@ ul {
   #main-hobbies {
     flex-direction: column;
   }
+
+  #violin {
+    width: 80%;
+  }
+
+  #coding {
+    width: 80%;
+  }
+
+  #music {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 610px) {
@@ -362,7 +375,7 @@ ul {
     font-size: 25px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .header__nav-name h4 {
     font-size: 20px;
   }
@@ -394,6 +407,22 @@ ul {
 
   #research__detail {
     width: 70%;
+  }
+
+  #work__detail {
+    width: 80%;
+  }
+
+  #violin {
+    width: 80%;
+  }
+
+  #coding {
+    width: 80%;
+  }
+
+  #music {
+    width: 80%;
   }
 }
 
@@ -503,11 +532,23 @@ ul {
   #main-experience {
     align-items: center;
   }
+
+  .comp p {
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .contact__icon {
     width: 30px;
     height: auto;
+  }
+
+  .comp p {
+    font-size: 10px;
+  }
+
+  #work__detail {
+    width: 80%;
   }
 }
